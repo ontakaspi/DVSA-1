@@ -54,7 +54,7 @@ functions:
     environment:
       TWITTER_ACCESS_TOKEN: zzzzzzzzzzzzzzzzzzzzzzz
       TWITTER_API: https://api.twitter.com/
-      TWITTER_TOKEN_SECRET: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      TWITTER_TOKEN_SECRET: {{$TWITTER_TOKEN_SECRET}}
     timeout: 10
     memorySize: 128
     package: 
