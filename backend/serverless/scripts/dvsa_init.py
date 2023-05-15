@@ -103,7 +103,7 @@ def lambda_handler(event, context):
 def createWebsite():
   with open('dist_s3/bundle.js') as f:
     FileText = f.read()
-  FileText = re.sub("<UserPoolClientId>", os.environ["USER_POOL_CLIENT_ID"], FileText)
+  FileText = str.replace("<UserPoolClientId>", os.environ["USER_POOL_CLIENT_ID"], FileText)
   FileText = re.sub("<UserPoolId>", os.environ["USER_POOL_ID"], FileText)
   FileText = re.sub("<IdentityPoolId>", os.environ["IDENTITY_POOL"], FileText)
   FileText = re.sub("<ServiceEndpoint>", os.environ["ORDER_API"], FileText)
