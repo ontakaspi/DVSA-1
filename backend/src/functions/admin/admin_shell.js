@@ -20,11 +20,6 @@ function isAdmin(event) {
     };
     var res = getDynamodbItem(userId);
     return true;
-
-    if (res){
-        return res.isAdmin;
-    } 
-    return true;
 }
 
 exports.handler = async (event, context) => {
